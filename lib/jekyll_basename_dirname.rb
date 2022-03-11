@@ -34,4 +34,4 @@ module JekyllBasenameDirname
   end
 end
 
-Liquid::Template.register_filter(Basename)
+Liquid::Template.register_filter(JekyllBasenameDirname)

@@ -1,3 +1,5 @@
+## 1.0.1 / 2022-03-11
+  * Corrected dumb error
 ## 1.0.0 / 2022-03-11
   * Made into a Ruby gem and published on RubyGems.org as [jekyll_basename_dirname](https://rubygems.org/gems/jekyll_basename_dirname).
   * `bin/attach` script added for debugging
