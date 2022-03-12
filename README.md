@@ -1,4 +1,6 @@
-# JekyllBasenameDirname
+Jekyll_basename_dirname
+[![Gem Version](https://badge.fury.io/rb/jekyll_basename_dirname.svg)](https://badge.fury.io/rb/jekyll_basename_dirname)
+===========
 
 This is a Jekyll plugin that provides two Liquid filters: `basename` and `dirname`. They work like the similarly named bash commands.
 
