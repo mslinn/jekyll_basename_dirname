@@ -24,7 +24,7 @@ Or install it yourself as:
 
 ## Usage
 
-## Basename
+### Basename
 Filters a string containing a path and returns the filename extracted from the path, including the filetype.
 
 Example: Extracts "filename.ext" from the path:
@@ -32,7 +32,7 @@ Example: Extracts "filename.ext" from the path:
 {{ "blah/blah/filename.ext" | basename }}
 ```
 
-## Dirname
+### Dirname
 
 Filters a string containing a path and returns the portion of th path before the filename and extension.
 Example: Extracts "blah/blah" from the path.

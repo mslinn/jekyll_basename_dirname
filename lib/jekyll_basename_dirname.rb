@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_relative "jekyll_basename_dirname/version"
+require_relative 'jekyll_basename_dirname/version'
 
 # @author Copyright 2020 Michael Slinn
 # @license SPDX-License-Identifier: Apache-2.0

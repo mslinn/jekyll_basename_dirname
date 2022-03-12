@@ -1,17 +1,17 @@
 # frozen_string_literal: true
 
-require_relative "lib/jekyll_basename_dirname/version"
+require_relative 'lib/jekyll_basename_dirname/version'
 
 Gem::Specification.new do |spec|
-  spec.name = "jekyll_basename_dirname"
+  spec.name = 'jekyll_basename_dirname'
   spec.version = JekyllBasenameDirname::VERSION
-  spec.authors = ["Mike Slinn"]
-  spec.email = ["mslinn@mslinn.com"]
+  spec.authors = ['Mike Slinn']
+  spec.email = ['mslinn@mslinn.com']
 
   spec.summary = "Jekyll plugin that provides two Liquid filters: basename and dirname."
   spec.description = "Jekyll plugin that provides two Liquid filters: basename and dirname. They work like the similarly named bash commands."
   spec.homepage = "https://github.com/mslinn/jekyll_basename_dirname"
-  spec.license = "MIT"
+  spec.license = 'MIT'
   spec.required_ruby_version = ">= 2.6.0"
 
   spec.metadata["allowed_push_host"] = "https://rubygems.org/"
@@ -27,14 +27,18 @@ Gem::Specification.new do |spec|
       (f == __FILE__) || f.match(%r{\A(?:(?:bin|test|spec|features)/|\.(?:git|travis|circleci)|appveyor)})
     end
   end
-  spec.bindir = "exe"
+  spec.bindir = 'exe'
   spec.executables = spec.files.grep(%r{\Aexe/}) { |f| File.basename(f) }
-  spec.require_paths = ["lib"]
+  spec.require_paths = ['lib']
 
   spec.add_development_dependency 'bundler'
+  spec.add_development_dependency 'debase'
+  spec.add_development_dependency 'jekyll'
   spec.add_development_dependency 'pry'
   spec.add_development_dependency 'rake'
   spec.add_development_dependency 'rspec'
   spec.add_development_dependency 'rubocop'
   spec.add_development_dependency 'rubocop-jekyll'
+  spec.add_development_dependency 'rubocop-rake'
+  spec.add_development_dependency 'ruby-debug-ide'
 end
