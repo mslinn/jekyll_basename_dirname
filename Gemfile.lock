@@ -2,6 +2,7 @@ PATH
   remote: .
   specs:
     jekyll_basename_dirname (1.0.2)
+      jekyll
 
 GEM
   remote: https://rubygems.org/

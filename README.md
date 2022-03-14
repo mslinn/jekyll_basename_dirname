@@ -2,7 +2,10 @@ Jekyll_basename_dirname
 [![Gem Version](https://badge.fury.io/rb/jekyll_basename_dirname.svg)](https://badge.fury.io/rb/jekyll_basename_dirname)
 ===========
 
-This is a Jekyll plugin that provides two Liquid filters: `basename` and `dirname`. They work like the similarly named bash commands.
+This is a Jekyll plugin that provides two Liquid filters: `basename` and `dirname`. 
+They work like the similarly named bash commands.
+
+More information is available on my web site about [my Jekyll plugins](https://www.mslinn.com/blog/2020/10/03/jekyll-plugins.html).
 
 
 ## Installation
