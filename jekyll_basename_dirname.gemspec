@@ -9,8 +9,7 @@ Gem::Specification.new do |spec|
   spec.email = ['mslinn@mslinn.com']
 
   spec.summary = "Jekyll plugin that provides two Liquid filters: basename and dirname."
-  spec.description = "Jekyll plugin that provides two Liquid filters: basename and dirname. They work like the similarly named bash commands."
-  spec.homepage = "https://github.com/mslinn/jekyll_basename_dirname"
+
   spec.license = 'MIT'
   spec.required_ruby_version = ">= 2.6.0"
 
@@ -31,11 +30,16 @@ Gem::Specification.new do |spec|
   spec.executables = spec.files.grep(%r{\Aexe/}) { |f| File.basename(f) }
   spec.require_paths = ['lib']
 
-  spec.add_dependency 'jekyll'
+  spec.post_install_message = <<~END_MESSAGE
+
+    Thanks for installing jekyll_basename_dirname!
+
+  END_MESSAGE
+
+  spec.add_dependency 'jekyll', '>= 3.5.0'
 
   spec.add_development_dependency 'bundler'
   spec.add_development_dependency 'debase'
-  spec.add_development_dependency 'jekyll'
   spec.add_development_dependency 'pry'
   spec.add_development_dependency 'rake'
   spec.add_development_dependency 'rspec'
