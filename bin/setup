@@ -3,6 +3,7 @@ set -euo pipefail
 IFS=$'\n\t'
 set -vx
 
+if [[ -z "$( which bundle )" ]]; then gem install bundler; fi
 bundle install
 
 # See https://www.honeybadger.io/blog/rbenv-rubygems-bundler-path/

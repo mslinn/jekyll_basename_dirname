@@ -7,6 +7,19 @@
     {
       "args": [
         "-I",
+        "${workspaceRoot}"
+      ],
+      "cwd": "${workspaceRoot}",
+      "name": "RSpec - all",
+      "program": "${workspaceRoot}/exe/rspec",
+      "request": "launch",
+      "showDebuggerOutput": false,
+      "type": "Ruby",
+      "useBundler": true,
+    },
+    {
+      "args": [
+        "-I",
         "${workspaceRoot}",
         "${file}"
       ],
@@ -18,19 +31,5 @@
       "type": "Ruby",
       "useBundler": true,
     },
-    {
-      "args": [
-        "-I",
-        "${workspaceRoot}"
-      ],
-      "cwd": "${workspaceRoot}",
-      "name": "RSpec - all",
-      "pathToBundler": "${env:HOME}/.rbenv/shims/bundle",
-      "program": "${workspaceRoot}/exe/rspec",
-      "request": "launch",
-      "showDebuggerOutput": false,
-      "type": "Ruby",
-      "useBundler": true,
-    }
   ]
 }
