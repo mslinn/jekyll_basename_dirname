@@ -5,4 +5,5 @@ source "https://rubygems.org"
 # Specify your gem's dependencies in jekyll_basename_dirname.gemspec
 gemspec
 
-gem "rake", "~> 13.0"
+gem "rake", "~> 13.0", require: false
+gem 'rspec', require: false
