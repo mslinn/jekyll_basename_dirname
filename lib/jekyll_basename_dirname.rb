@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+require "jekyll_plugin_logger"
 require_relative 'jekyll_basename_dirname/version'
 
 # @author Copyright 2020 Michael Slinn
@@ -32,6 +33,8 @@ module JekyllBasenameDirname
   def basename_without_extension(filepath)
     File.basename(filepath).split('.')[0...-1].join('.')
   end
+
+  info "Loaded jekyll_basename_dirname plugin."
 end
 
 Liquid::Template.register_filter(JekyllBasenameDirname)
