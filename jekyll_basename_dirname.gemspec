@@ -18,9 +18,9 @@ Gem::Specification.new do |spec|
   spec.homepage = "https://github.com/mslinn/jekyll_basename_dirname"
   spec.metadata = {
     "bug_tracker_uri" => "#{spec.homepage}/issues",
+    "changelog_uri"   => "#{spec.homepage}/CHANGELOG.md",
     "homepage_uri"    => spec.homepage,
     "source_code_uri" => spec.homepage,
-    "changelog_uri"   => "#{spec.homepage}/CHANGELOG.md"
   }
 
   # Specify which files should be added to the gem when it is released.
@@ -41,10 +41,15 @@ Gem::Specification.new do |spec|
   END_MESSAGE
 
   spec.add_dependency 'jekyll', '>= 3.5.0'
+  spec.add_dependency 'jekyll_plugin_logger'
 
+  spec.add_development_dependency "bundler"
   spec.add_development_dependency 'debase'
-  spec.add_development_dependency 'pry'
+  spec.add_development_dependency 'jekyll', '>= 3.5'
+  spec.add_development_dependency "rake"
+  spec.add_development_dependency "rspec", "~> 3.0"
   spec.add_development_dependency 'rubocop-jekyll'
   spec.add_development_dependency 'rubocop-rake'
+  spec.add_development_dependency 'rubocop-rspec'
   spec.add_development_dependency 'ruby-debug-ide'
 end

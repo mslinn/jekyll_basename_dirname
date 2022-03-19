@@ -32,7 +32,7 @@ module Jekyll
     File.basename(filepath).split('.')[0...-1].join('.')
   end
 
-  info "Loaded jekyll_basename_dirname plugin."
+  info { "Loaded jekyll_basename_dirname plugin." }
 end
 
 Liquid::Template.register_filter(Jekyll)
