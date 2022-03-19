@@ -7,9 +7,7 @@ require_relative 'jekyll_basename_dirname/version'
 # @license SPDX-License-Identifier: Apache-2.0
 #
 # Jekyll filters for working with paths.
-module JekyllBasenameDirname
-  class Error < StandardError; end
-
+module Jekyll
   # Filters a string containing a path.
   # @return [String] the filename extracted from the path, including the filetype.
   # @example Extracts "filename.ext" from the path
@@ -37,4 +35,4 @@ module JekyllBasenameDirname
   info "Loaded jekyll_basename_dirname plugin."
 end
 
-Liquid::Template.register_filter(JekyllBasenameDirname)
+Liquid::Template.register_filter(Jekyll)
