@@ -121,7 +121,6 @@ PLATFORMS
 DEPENDENCIES
   bundler
   debase
-  jekyll (>= 3.5)
   jekyll_basename_dirname!
   rake (~> 13.0)
   rspec
@@ -131,4 +130,4 @@ DEPENDENCIES
   ruby-debug-ide
 
 BUNDLED WITH
-   2.3.8
+   2.3.7

@@ -45,7 +45,6 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency "bundler"
   spec.add_development_dependency 'debase'
-  spec.add_development_dependency 'jekyll', '>= 3.5'
   spec.add_development_dependency "rake"
   spec.add_development_dependency "rspec", "~> 3.0"
   spec.add_development_dependency 'rubocop-jekyll'
