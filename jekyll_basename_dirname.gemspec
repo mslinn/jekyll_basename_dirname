@@ -2,8 +2,15 @@
 
 require_relative "lib/jekyll_basename_dirname/version"
 
+module Blah
+  def self.blah(variable)
+    "Test #{variable}"
+  end
+end
+
 # rubocop:disable Metrics/BlockLength
 Gem::Specification.new do |spec|
+  # Gem.blah("Blah")
   spec.authors = ["Mike Slinn"]
   spec.bindir = "exe"
   spec.email = "mslinn@mslinn.com"
