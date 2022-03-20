@@ -124,6 +124,7 @@ DEPENDENCIES
   jekyll_basename_dirname!
   rake (~> 13.0)
   rspec
+  rubocop
   rubocop-jekyll
   rubocop-rake
   rubocop-rspec
