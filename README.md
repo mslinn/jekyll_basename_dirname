@@ -2,7 +2,7 @@ Jekyll_basename_dirname
 [![Gem Version](https://badge.fury.io/rb/jekyll_basename_dirname.svg)](https://badge.fury.io/rb/jekyll_basename_dirname)
 ===========
 
-This is a Jekyll plugin that provides two Liquid filters: `basename` and `dirname`. 
+This is a Jekyll plugin that provides two Liquid filters: `basename` and `dirname`.
 They work like the similarly named bash commands.
 
 More information is available on my web site about [my Jekyll plugins](https://www.mslinn.com/blog/2020/10/03/jekyll-plugins.html).
@@ -29,20 +29,28 @@ Or install it yourself as:
 
 ## Usage
 
-### Basename
-Filters a string containing a path and returns the filename extracted from the path, including the filetype.
-
-Example: Extracts "filename.ext" from the path:
-```
-{{ "blah/blah/filename.ext" | basename }}
-```
-
 ### Dirname
 
 Filters a string containing a path and returns the portion of th path before the filename and extension.
 Example: Extracts "blah/blah" from the path.
 ```
-{{ "blah/blah/filename.ext" | dirname }}
+{{ "blah/blah/filename.ext" | dirname }} => blah/blah
+```
+
+### Basename
+Filters a string containing a path and returns the filename extracted from the path, including the filetype.
+
+Example: Extracts "filename.ext" from the path:
+```
+{{ "blah/blah/filename.ext" | basename }} => filename.ext
+```
+
+### Basename Without Extension
+Filters a string containing a path and returns the filename extracted from the path, including the filetype.
+
+Example: Extracts "filename.ext" from the path:
+```
+{{ "blah/blah/filename.ext" | basename_without_extension  }} => filename
 ```
 
 
@@ -60,14 +68,14 @@ To install this gem onto your local machine, run:
 $ bundle exec rake install
 ```
 
-To release a new version, 
+To release a new version,
   1. Update the version number in `version.rb`.
   2. Commit all changes to git; if you don't the next step might fail with an unexplainable error message.
   3. Run the following:
      ```shell
      $ bundle exec rake release
      ```
-     The above creates a git tag for the version, commits the created tag, 
+     The above creates a git tag for the version, commits the created tag,
      and pushes the new `.gem` file to [RubyGems.org](https://rubygems.org).
 
 
