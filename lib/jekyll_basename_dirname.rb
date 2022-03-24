@@ -7,9 +7,9 @@ require_relative "jekyll_basename_dirname/version"
 #
 # Jekyll filters for working with paths.
 module JekyllBasenameDirnameName
-  attr_accessor :logger
-
   PLUGIN_NAME = "jekyll_basename_dirname"
+
+  _logger = PluginMetaLogger.new_logger(self)
 
   # Filters a string containing a path.
   # @return [String] the filename extracted from the path, including the filetype.
@@ -36,8 +36,5 @@ module JekyllBasenameDirnameName
   end
 end
 
-Jekyll::Hooks.register(:site, :after_reset) do |site|
-  PluginMetaLogger.instance.info { "Loaded #{JekyllBasenameDirnameName::PLUGIN_NAME} v#{JekyllBasenameDirname::VERSION} plugin." }
-  JekyllBasenameDirnameName.logger = PluginLogger.new(self, site.config)
-  Liquid::Template.register_filter(JekyllBasenameDirnameName)
-end
+PluginMetaLogger.instance.info { "Loaded #{JekyllBasenameDirnameName::PLUGIN_NAME} v#{JekyllBasenameDirname::VERSION} plugin." }
+Liquid::Template.register_filter(JekyllBasenameDirnameName)
