@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
-require "jekyll"
+require "liquid"
+require "jekyll_plugin_logger"
 require "fileutils"
 require_relative "../lib/jekyll_basename_dirname"
 

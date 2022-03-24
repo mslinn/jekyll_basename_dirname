@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require "liquid"
-require "jekyll_plugin_logger"
 require_relative "jekyll_basename_dirname/version"
 
 module JekyllBasenameDirnameName
