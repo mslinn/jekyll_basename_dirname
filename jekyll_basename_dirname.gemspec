@@ -9,18 +9,18 @@ Gem::Specification.new do |spec|
   spec.authors = ["Mike Slinn"]
   spec.bindir = "exe"
   spec.description = <<~END_OF_DESC
-    Jekyll plugin that provides two Liquid filters: basename and dirname.
+    This Jekyll plugin provides 3 Liquid filters: dirname, basename and basename_without_extension.
   END_OF_DESC
-  spec.email = "mslinn@mslinn.com"
+  spec.email = ["mslinn@mslinn.com"]
   spec.files = Dir[".rubocop.yml", "LICENSE.*", "Rakefile", "{lib,spec}/**/*", "*.gemspec", "*.md"]
-  spec.homepage = "https://www.mslinn.com/blog/2020/12/28/custom-logging-in-jekyll-plugins.html"
+  spec.homepage = "https://www.mslinn.com/blog/2020/10/03/jekyll-plugins.html#basename"
   spec.license = "MIT"
   spec.metadata = {
     "allowed_push_host" => "https://rubygems.org",
     "bug_tracker_uri"   => "#{github}/issues",
     "changelog_uri"     => "#{github}/CHANGELOG.md",
     "homepage_uri"      => spec.homepage,
-    "source_code_uri"   => spec.homepage,
+    "source_code_uri"   => github,
   }
   spec.name = "jekyll_basename_dirname"
   spec.post_install_message = <<~END_MESSAGE
@@ -30,7 +30,8 @@ Gem::Specification.new do |spec|
   END_MESSAGE
   spec.require_paths = ["lib"]
   spec.required_ruby_version = ">= 2.6.0"
-  spec.summary = "Jekyll plugin that provides two Liquid filters: basename and dirname."
+  spec.summary = "This Jekyll plugin provides 3 Liquid filters: dirname, basename and basename_without_extension."
+  spec.test_files = spec.files.grep(%r!^(test|spec|features)/!)
   spec.version = JekyllBasenameDirname::VERSION
 
   spec.add_dependency "jekyll", ">= 3.5.0"

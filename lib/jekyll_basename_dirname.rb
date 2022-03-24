@@ -2,15 +2,15 @@
 
 require_relative "jekyll_basename_dirname/version"
 
-module JekyllBasenameDirnameName
-  PLUGIN_NAME = "jekyll_basename_dirname"
-end
-
 # @author Copyright 2020 Michael Slinn
 # @license SPDX-License-Identifier: Apache-2.0
 #
 # Jekyll filters for working with paths.
-module Jekyll
+module JekyllBasenameDirnameName
+  attr_accessor :logger
+
+  PLUGIN_NAME = "jekyll_basename_dirname"
+
   # Filters a string containing a path.
   # @return [String] the filename extracted from the path, including the filetype.
   # @example Extracts "filename.ext" from the path
@@ -32,9 +32,12 @@ module Jekyll
   # @example Extracts "filename" from the path.
   #   {{ "blah/blah/filename.ext" | basename_without_extension }}
   def basename_without_extension(filepath)
-    File.basename(filepath).split('.')[0...-1].join('.')
+    File.basename(filepath).split(".")[0...-1].join(".")
   end
 end
 
-PluginMetaLogger.instance.info { "Loaded #{JekyllBasenameDirnameName::PLUGIN_NAME} v#{JekyllBasenameDirname::VERSION} plugin." }
-Liquid::Template.register_filter(Jekyll)
+Jekyll::Hooks.register(:site, :after_reset) do |site|
+  PluginMetaLogger.instance.info { "Loaded #{JekyllBasenameDirnameName::PLUGIN_NAME} v#{JekyllBasenameDirname::VERSION} plugin." }
+  JekyllBasenameDirnameName.logger = PluginLogger.new(self, site.config)
+  Liquid::Template.register_filter(JekyllBasenameDirnameName)
+end
