@@ -2,6 +2,7 @@
 
 require "liquid"
 require "fileutils"
+# require "jekyll_plugin_logger"
 require_relative "../lib/jekyll_basename_dirname"
 
 RSpec.describe(JekyllBasenameDirname) do

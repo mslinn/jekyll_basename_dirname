@@ -3,8 +3,8 @@
 # frozen_string_literal: true
 
 require "bundler/setup"
-require "liquid"
-require "jekyll_basename_dirname"
-
 require "irb"
+require "jekyll_basename_dirname"
+require "liquid"
+
 IRB.start(__FILE__)
