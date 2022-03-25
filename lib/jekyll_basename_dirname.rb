@@ -37,5 +37,5 @@ module JekyllBasenameDirnameName
   end
 end
 
-PluginMetaLogger.info { "Loaded #{JekyllBasenameDirnameName::PLUGIN_NAME} v#{JekyllBasenameDirname::VERSION} plugin." }
+PluginMetaLogger.instance.info { "Loaded #{JekyllBasenameDirnameName::PLUGIN_NAME} v#{JekyllBasenameDirname::VERSION} plugin." }
 Liquid::Template.register_filter(JekyllBasenameDirnameName)
