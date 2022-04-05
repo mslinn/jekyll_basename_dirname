@@ -10,7 +10,7 @@ require_relative "jekyll_basename_dirname/version"
 module JekyllBasenameDirnameName
   PLUGIN_NAME = "jekyll_basename_dirname"
 
-  _logger = PluginMetaLogger.instance.new_logger(self)
+  _logger = PluginMetaLogger.instance.new_logger(self, PluginMetaLogger.instance.config)
 
   # Filters a string containing a path.
   # @return [String] the filename extracted from the path, including the filetype.
