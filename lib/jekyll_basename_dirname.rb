@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+require "jekyll"
 require "jekyll_plugin_logger"
 require_relative "jekyll_basename_dirname/version"
 
@@ -37,5 +38,5 @@ module JekyllBasenameDirnameName
   end
 end
 
-PluginMetaLogger.instance.info { "Loaded #{JekyllBasenameDirnameName::PLUGIN_NAME} v#{JekyllBasenameDirname::VERSION} plugin." }
+PluginMetaLogger.instance.info { "Loaded #{JekyllBasenameDirnameName::PLUGIN_NAME} v#{JekyllBasenameDirnameVersion::VERSION} plugin." }
 Liquid::Template.register_filter(JekyllBasenameDirnameName)

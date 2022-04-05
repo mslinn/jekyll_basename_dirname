@@ -1,5 +1,5 @@
 # frozen_string_literal: true
 
-module JekyllBasenameDirname
+module JekyllBasenameDirnameVersion
   VERSION = "1.0.3"
 end

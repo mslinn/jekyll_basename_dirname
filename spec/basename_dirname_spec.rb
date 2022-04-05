@@ -1,12 +1,11 @@
 # frozen_string_literal: true
 
-require "liquid"
+require "jekyll"
 require "fileutils"
-# require "jekyll_plugin_logger"
 require_relative "../lib/jekyll_basename_dirname"
 
-RSpec.describe(JekyllBasenameDirname) do
-  include JekyllBasenameDirname
+RSpec.describe(JekyllBasenameDirnameName) do
+  include JekyllBasenameDirnameName
 
   it "verifies basename" do
     expect(basename("a/b/c/d/e.html")).to eq("e.html")
