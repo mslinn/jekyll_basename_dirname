@@ -15,7 +15,6 @@ AllCops:
     - vendor/**/*
     - Gemfile*
   NewCops: enable
-  TargetRubyVersion: 2.6
 
 Gemspec/DeprecatedAttributeAssignment:
   Enabled: false
