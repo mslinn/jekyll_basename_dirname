@@ -1,0 +1,114 @@
+---
+description: Jekyll basename_dirname  plugin demo
+layout: default
+title: Demo
+---
+{% assign blah="/this/is/a/long/path/filename.html" %}
+
+
+<!-- #region Basename -->
+<h2 id="basename">Basename</h2>
+
+<!-- #region Current page -->
+<h3 id="cp">Current page</h3>
+<p>
+  This example returns the basename of this page, which has the url <code>{{page['url']}}</code>.
+</p>
+<pre>{% raw %}{{ page['url'] | basename }}{% endraw %}</pre>
+<p>Renders as:</p>
+<pre>{{ page['url'] | basename }}</pre>
+<!-- endregion -->
+
+
+<!-- #region Arbitrary Path -->
+<h3 id="ap">Arbitrary Path</h3>
+<p>
+  This example returns the basename of an arbitrary path, <code>{{blah}}</code>.
+</p>
+<pre>{% raw %}{{ blah | basename }}{% endraw %}</pre>
+<p>Renders as:</p>
+<pre>{{ blah | basename }}</pre>
+<!-- endregion -->
+<!-- endregion -->
+
+
+<!-- #region basename without extension -->
+<h2 id="basename_without_extension">Basename Without Extension</h2>
+
+<!-- #region Current page -->
+<h3 id="cp3">Current page</h3>
+<p>
+  This example returns the basename of this page, which has the url <code>{{page['url']}}</code>.
+</p>
+<pre>{% raw %}{{ page['url'] | basename_without_extension }}{% endraw %}</pre>
+<p>Renders as:</p>
+<pre>{{ page['url'] | basename_without_extension }}</pre>
+<!-- endregion -->
+
+
+<!-- #region Arbitrary Path -->
+<h3 id="ap3">Arbitrary Path</h3>
+<p>
+  This example returns the basename without extension of an arbitrary path, <code>{{blah}}</code>.
+</p>
+<pre>{% raw %}{{ blah | basename_without_extension }}{% endraw %}</pre>
+<p>Renders as:</p>
+<pre>{{ blah | basename_without_extension }}</pre>
+<!-- endregion -->
+<!-- endregion -->
+
+
+<!-- #region Dirname -->
+<h2 id="dirname">Dirname</h2>
+
+<!-- #region Current page -->
+<h3 id="cp2">Current page</h3>
+<p>
+  This example returns the dirname of this page, which has the url <code>{{page['url']}}</code>.
+</p>
+<pre>{% raw %}{{ page['url'] | dirname }}{% endraw %}</pre>
+<p>Renders as:</p>
+<pre>{{ page['url'] | basename }}</pre>
+<!-- endregion -->
+
+
+<!-- #region Arbitrary Path -->
+<h3 id="ap2">Arbitrary Path</h3>
+<p>
+  This example returns the dirname of an arbitrary path, <code>{{blah}}</code>.
+</p>
+<pre>{% raw %}{{ blah | dirname }}{% endraw %}</pre>
+<p>Renders as:</p>
+<pre>{{ blah | dirname }}</pre>
+<!-- endregion -->
+<!-- endregion -->
+
+
+<!-- #region WBR -->
+<h2 id="wbr">WBR</h2>
+
+<!-- #region Current page -->
+<h3 id="cp4">Current page</h3>
+<p>
+  This example returns the full path of this page, such that it wraps, which has the url <code>{{page['url']}}</code>.
+</p>
+<pre>{% raw %}{{ page['url'] | wbr }}{% endraw %}</pre>
+<p>Renders as:</p>
+<pre>{{ page['url'] | wbr }}</pre>
+<p>Renders as (escaped):</p>
+<pre>{{ page['url'] | wbr | escape }}</pre>
+<!-- endregion -->
+
+
+<!-- #region Arbitrary Path -->
+<h3 id="ap4">Arbitrary Path</h3>
+<p>
+  This example returns the full path of an arbitrary path, such that it wraps, <code>{{blah}}</code>.
+</p>
+<pre>{% raw %}{{ blah | wbr }}{% endraw %}</pre>
+<p>Renders as:</p>
+<pre>{{ blah | wbr }}</pre>
+<p>Renders as (escaped):</p>
+<pre>{{ blah | wbr | escape }}</pre>
+<!-- endregion -->
+<!-- endregion -->

@@ -34,6 +34,16 @@ module JekyllBasenameDirnameName
   def basename_without_extension(filepath)
     File.basename(filepath).split('.')[0...-1].join('.')
   end
+
+  # Filters a string containing a path so long paths wrap in an HTML page.
+  # @return the path with '<wbr>' inserted after every slash.
+  # @example
+  #   {{ 'blah/blah/filename.ext' | wbr }}
+  # Returns:
+  #   blah/<wbr>/blah/<wbr>filename.ext
+  def wbr(filepath)
+    filepath.gsub '/', '/<wbr>'
+  end
 end
 
 PluginMetaLogger.instance.info { "Loaded #{JekyllBasenameDirnameName::PLUGIN_NAME} v#{JekyllBasenameDirnameVersion::VERSION} plugin." }

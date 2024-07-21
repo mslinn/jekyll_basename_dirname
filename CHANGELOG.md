@@ -1,5 +1,16 @@
 # Change Log
 
+## 1.0.4 / 2025-07-21
+
+* Added demo
+* Added wbr filter
+
+
+## 1.0.3 / 2022-04-06
+
+* Brought up to current standards
+
+
 ## 1.0.2 / 2022-04-05
 
 * Updated to jekyll_plugin_logger v2.1.0
