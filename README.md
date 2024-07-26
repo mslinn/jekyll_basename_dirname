@@ -4,6 +4,10 @@ This is a Jekyll plugin that provides the following Liquid filters:
 `basename`, `basename_without_extension`, `dirname` and `wbr`.
 
 `basename` and `dirname` work like the similarly named bash commands.
+`basename_without_extension` does what you might expect.
+
+`wbr` Adds a <wbr> element after every "/" character in a string;
+this causes strings containing long paths to wrap in an HTML page.
 
 More information is available on Mike Slinn's web site about [my Jekyll plugins](https://www.mslinn.com/blog/2020/10/03/jekyll-plugins.html).
 
