@@ -1,6 +1,6 @@
 # Change Log
 
-## 1.0.4 / 2025-07-21
+## 1.0.4 / 2024-07-21
 
 * Added demo
 * Added wbr filter
